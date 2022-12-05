@@ -23,21 +23,19 @@ with open(r'input2.txt', 'r') as input_file:
         line.pop(0)
         line.pop(1)
         line.pop(2)
-        # print(index['1'])
         # print(index['2'])
         l = index[line[1]][:int(line[0])]
-        l = l[::-1]
         # if index[]
         # print(l)
         index[line[2]] = l + index[line[2]]
         index[line[1]] = list(index[line[1]])
         for i in range(int(line[0])):
-            print(type(index[line[1]]))  # showing list and string data type
             if (index[line[1]] != []):  
                 index[line[1]].pop(0)
         index[line[1]] = ''.join([str(elem) for elem in index[line[1]]])
+# print(index['i'][0])
+# print(index['2'][0])
+# print(index['3'][0])
 
 for i in range(1, 10):
     print(index[str(i)][0])
-
-# index['1'].strip
